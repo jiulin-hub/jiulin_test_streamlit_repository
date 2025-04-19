@@ -2,14 +2,14 @@
 import streamlit as st
 import time
 
-# 页面设置
+
 st.set_page_config(
     page_title="Rainbow UI",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# 注入CSS样式
+
 def inject_css():
     rainbow_css = """
     <style>
@@ -60,7 +60,7 @@ def inject_css():
 
 inject_css()
 
-# 页面内容
+
 st.title("🌈 LIUJIULIN")
 st.write("Lucky to lucky 🏀")
 
@@ -75,7 +75,7 @@ with st.container():
                 st.session_state.submitted = True
 
     with col2:
-        st.header("一寸光阴一寸金，澎湃热爱每一秒")
+        st.header("JIULIN - Hub")
         clock_placeholder = st.empty()
         while True:
             current_time = time.strftime("%H:%M:%S")
@@ -85,4 +85,4 @@ with st.container():
 
 if st.session_state.get('submitted'):
     st.balloons()
-    st.success(f"你好 {name}！今天也要保持好心情 {mood} 哦！")
+    st.success(f"Hi {name}！Good {mood} ~！")
